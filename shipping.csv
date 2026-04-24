@@ -1,0 +1,11 @@
+shipping_id,order_id,address_line,city,state,pincode,shipping_status,estimated_date,delivered_date,created_at,updated_at
+1,1,12 Marine Drive,Mumbai,Maharashtra,400001,delivered,13-01-2024,12-01-2024,12-04-2026 21:36,12-04-2026 21:36
+2,2,45 SG Highway,Ahmedabad,Gujarat,380001,delivered,18-01-2024,17-01-2024,12-04-2026 21:36,12-04-2026 21:36
+3,3,7 Connaught Place,Delhi,Delhi,110001,delivered,08-02-2024,07-02-2024,12-04-2026 21:36,12-04-2026 21:36
+4,4,22 Anna Salai,Chennai,Tamil Nadu,600001,in_transit,23-02-2024,NULL,12-04-2026 21:36,12-04-2026 21:36
+5,5,56 MI Road,Jaipur,Rajasthan,302001,delivered,04-03-2024,03-03-2024,12-04-2026 21:36,12-04-2026 21:36
+6,7,89 MG Road,Bengaluru,Karnataka,560001,delivered,13-04-2024,12-04-2024,12-04-2026 21:36,12-04-2026 21:36
+7,8,34 Banjara Hills,Hyderabad,Telangana,500001,delivered,25-04-2024,24-04-2024,12-04-2026 21:36,12-04-2026 21:36
+8,10,67 Hazratganj,Lucknow,Uttar Pradesh,226001,delivered,21-05-2024,20-05-2024,12-04-2026 21:36,12-04-2026 21:36
+9,11,12 Marine Drive,Mumbai,Maharashtra,400001,delivered,04-06-2024,03-06-2024,12-04-2026 21:36,12-04-2026 21:36
+10,12,7 Connaught Place,Delhi,Delhi,110001,out_for_delivery,23-06-2024,NULL,12-04-2026 21:36,12-04-2026 21:36

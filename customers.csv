@@ -1,0 +1,11 @@
+customer_id,first_name,last_name,email,phone,city,state,pincode,signup_date,created_at,updated_at
+1,Aarav,Sharma,aarav.sharma@email.com,9876543210,Mumbai,Maharashtra,400001,15-01-2023,12-04-2026 21:36,12-04-2026 21:36
+2,Priya,Patel,priya.patel@email.com,9871234567,Ahmedabad,Gujarat,380001,20-02-2023,12-04-2026 21:36,12-04-2026 21:36
+3,Rohan,Mehta,rohan.mehta@email.com,9812345678,Delhi,Delhi,110001,10-03-2023,12-04-2026 21:36,12-04-2026 21:36
+4,Sneha,Iyer,sneha.iyer@email.com,9834567890,Chennai,Tamil Nadu,600001,05-04-2023,12-04-2026 21:36,12-04-2026 21:36
+5,Vikram,Singh,vikram.singh@email.com,9845678901,Jaipur,Rajasthan,302001,22-05-2023,12-04-2026 21:36,12-04-2026 21:36
+6,Anjali,Nair,anjali.nair@email.com,9856789012,Kochi,Kerala,682001,18-06-2023,12-04-2026 21:36,12-04-2026 21:36
+7,Karan,Gupta,karan.gupta@email.com,9867890123,Pune,Maharashtra,411001,30-07-2023,12-04-2026 21:36,12-04-2026 21:36
+8,Meera,Joshi,meera.joshi@email.com,9878901234,Bengaluru,Karnataka,560001,12-08-2023,12-04-2026 21:36,12-04-2026 21:36
+9,Arjun,Rao,arjun.rao@email.com,9889012345,Hyderabad,Telangana,500001,25-09-2023,12-04-2026 21:36,12-04-2026 21:36
+10,Divya,Mishra,divya.mishra@email.com,9890123456,Lucknow,Uttar Pradesh,226001,08-10-2023,12-04-2026 21:36,12-04-2026 21:36

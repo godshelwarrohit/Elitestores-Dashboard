@@ -1,0 +1,11 @@
+product_id,product_name,category_id,price,stock
+1,Samsung Galaxy S23,1,79999,50
+2,Apple MacBook Air M2,1,114999,30
+3,Sony WH-1000XM5,1,29999,75
+4,Levi's 511 Slim Jeans,2,3499,200
+5,Nike Air Force 1,2,8999,150
+6,Atomic Habits,3,399,500
+7,Rich Dad Poor Dad,3,299,400
+8,Instant Pot Duo 7-in-1,4,8499,60
+9,Philips Air Fryer,4,6999,80
+10,Decathlon Yoga Mat,5,999,300

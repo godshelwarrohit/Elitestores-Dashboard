@@ -1,0 +1,13 @@
+payment_id,order_id,payment_mode,amount,payment_date,payment_status,created_at
+1,1,upi,80797,10-01-2024,completed,12-04-2026 21:36
+2,2,credit_card,114999,15-01-2024,completed,12-04-2026 21:36
+3,3,net_banking,30298,05-02-2024,completed,12-04-2026 21:36
+4,4,debit_card,6998,20-02-2024,completed,12-04-2026 21:36
+5,5,upi,8999,01-03-2024,completed,12-04-2026 21:36
+6,6,cod,8499,15-03-2024,refunded,12-04-2026 21:36
+7,7,wallet,8997,10-04-2024,completed,12-04-2026 21:36
+8,8,credit_card,79999,22-04-2024,completed,12-04-2026 21:36
+9,9,upi,114999,05-05-2024,pending,12-04-2026 21:36
+10,10,net_banking,1197,18-05-2024,completed,12-04-2026 21:36
+11,11,upi,29999,01-06-2024,completed,12-04-2026 21:36
+12,12,credit_card,17998,20-06-2024,completed,12-04-2026 21:36

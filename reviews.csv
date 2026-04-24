@@ -1,0 +1,9 @@
+review_id,product_id,customer_id,rating,review_text,review_date,created_at
+1,1,1,5,"Excellent phone, camera quality is top-notch!",20-01-2024,12-04-2026 21:36
+2,2,2,5,Best laptop I have ever owned. M2 chip is blazing fast.,25-01-2024,12-04-2026 21:36
+3,3,3,4,"Great headphones, amazing noise cancellation.",15-02-2024,12-04-2026 21:36
+4,6,1,5,Life-changing book. Highly recommended!,22-01-2024,12-04-2026 21:36
+5,5,5,4,"Very comfortable shoes, true to size.",10-03-2024,12-04-2026 21:36
+6,9,7,4,Cooks food quickly and evenly.,20-04-2024,12-04-2026 21:36
+7,1,8,4,Good phone but battery life could be better.,01-05-2024,12-04-2026 21:36
+8,7,3,3,Decent book but a bit repetitive.,18-02-2024,12-04-2026 21:36
