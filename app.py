@@ -148,9 +148,7 @@ with col_right3:
                  [["product_name", "category_name", "stock", "price"]]
                  .sort_values("stock"))
     low_stock.columns = ["Product", "Category", "Units Left", "Price (₹)"]
-    st.dataframe(low_stock.style.background_gradient(subset=["Units Left"], cmap="Reds_r"),
-                 use_container_width=True, hide_index=True)
-
+    st.dataframe(low_stock, use_container_width=True, hide_index=True)
 st.divider()
 
 
