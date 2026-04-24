@@ -47,7 +47,7 @@ st.divider()
 
 st.subheader("📈 Monthly Revenue Trend")
 
-orders_items["order_date"] = pd.to_datetime(orders_items["order_date"])
+orders_items["order_date"] = pd.to_datetime(orders_items["order_date"], dayfirst=True, errors='coerce')
 orders_items["month"] = orders_items["order_date"].dt.to_period("M").astype(str)
 
 monthly = (orders_items.assign(revenue=orders_items["quantity"] * orders_items["unit_price"])
