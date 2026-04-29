@@ -5,6 +5,7 @@ An interactive sales analytics dashboard for an e-commerce platform built with S
 ## Live Demo
 
 [View Live Dashboard](https://elitestores-dashboard-do9r68bmsmd4ojhjhrkn6s.streamlit.app)
+<img width="1902" height="909" alt="image" src="https://github.com/user-attachments/assets/90fdfb76-2b8e-499f-8f1e-f9235dc43efc" />
 
 ## Dashboard Sections
 
