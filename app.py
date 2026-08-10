@@ -25,7 +25,7 @@ st.markdown("Real-time insights from the EliteStores e-commerce database.")
 st.divider()
 
 
-# SECTION 1: KPI CARDS
+# KPI CARDS
 
 
 total_revenue  = round((orders_items["quantity"] * orders_items["unit_price"]).sum(), 2)
@@ -42,7 +42,7 @@ col4.metric("🧾 Avg Order Value", f"₹{aov:,.0f}")
 st.divider()
 
 
-# SECTION 2: MONTHLY REVENUE TREND
+#  MONTHLY REVENUE TREND
 
 
 st.subheader("📈 Monthly Revenue Trend")
@@ -62,7 +62,7 @@ st.plotly_chart(fig_trend, use_container_width=True)
 st.divider()
 
 
-# SECTION 3: TOP PRODUCTS + CATEGORY REVENUE
+#  TOP PRODUCTS + CATEGORY REVENUE
 
 
 col_left, col_right = st.columns(2)
@@ -93,7 +93,7 @@ with col_right:
 st.divider()
 
 
-# SECTION 4: TOP CUSTOMERS + PAYMENT MODES
+#  TOP CUSTOMERS + PAYMENT MODES
 
 
 col_left2, col_right2 = st.columns(2)
@@ -127,7 +127,7 @@ with col_right2:
 st.divider()
 
 
-# SECTION 5: ORDER STATUS + LOW STOCK
+# ORDER STATUS + LOW STOCK
 
 
 col_left3, col_right3 = st.columns(2)
@@ -152,7 +152,7 @@ with col_right3:
 st.divider()
 
 
-# SECTION 6: PRODUCT RATINGS
+#  PRODUCT RATINGS
 
 
 st.subheader("⭐ Product Ratings Leaderboard")
