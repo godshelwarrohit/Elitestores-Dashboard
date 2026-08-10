@@ -1,20 +1,20 @@
 CREATE DATABASE IF NOT EXISTS EliteStores;
 USE EliteStores;
 
--- Section 1 : Table Design
+-- Table Design
 
--- ---------------------------------------------------
--- 1. Categories
--- ---------------------------------------------------
+
+-- 1.Categories
+
 CREATE TABLE categories (	
 		category_id INT PRIMARY KEY AUTO_INCREMENT,
         category_name VARCHAR (100) NOT NULL UNIQUE,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 		);
 		
--- ---------------------------------------------------
--- 2. Customers
--- ---------------------------------------------------
+
+-- 2.Customers
+
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY AUTO_INCREMENT, 
 	first_name VARCHAR (150) NOT NULL,
@@ -29,9 +29,8 @@ CREATE TABLE customers (
     updated_at  DATETIME     DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     );
 
--- ---------------------------------------------------
--- 3. Products
--- ---------------------------------------------------
+
+-- 3.Products
 CREATE TABLE products ( 
       product_id INT PRIMARY KEY AUTO_INCREMENT,
       product_name VARCHAR (150) NOT NULL,
@@ -41,9 +40,9 @@ CREATE TABLE products (
       FOREIGN KEY (category_id) REFERENCES categories(category_id)
  );
  
- -- ---------------------------------------------------
- -- 4. orders
- -- ---------------------------------------------------
+ 
+ -- 4.orders
+ 
  CREATE TABLE orders (
        order_id INT PRIMARY KEY AUTO_INCREMENT,
        customer_id INT NOT NULL,
@@ -55,9 +54,8 @@ CREATE TABLE products (
        FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
--- ---------------------------------------------------
--- 5. Order_items
--- ---------------------------------------------------
+
+-- 5.Order_items
 CREATE TABLE order_items (
     order_item_id INT PRIMARY KEY AUTO_INCREMENT,
     order_id INT NOT NULL,
@@ -68,9 +66,9 @@ CREATE TABLE order_items (
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
  
- -- ---------------------------------------------------
+ 
  -- 6.Payments
- -- ---------------------------------------------------
+
 CREATE TABLE payments (
 	payment_id INT PRIMARY KEY AUTO_INCREMENT,
     order_id INT,
@@ -84,9 +82,8 @@ CREATE TABLE payments (
     FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
--- ---------------------------------------------------
--- 7. Shipping
--- ---------------------------------------------------
+
+-- 7. Shippiing
 CREATE TABLE shipping (
     shipping_id       INT PRIMARY KEY AUTO_INCREMENT,
     order_id          INT         NOT NULL UNIQUE,
@@ -103,9 +100,9 @@ CREATE TABLE shipping (
     FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
--- ---------------------------------------------------
--- 8. Reviews
--- ---------------------------------------------------
+
+-- 8.Reviews
+
 CREATE TABLE reviews (
     review_id   INT PRIMARY KEY AUTO_INCREMENT,
     product_id  INT NOT NULL,
@@ -119,9 +116,9 @@ CREATE TABLE reviews (
     UNIQUE (product_id, customer_id)   -- one review per customer per product
 );
  
- -- ---------------------------------------------------
- -- 9. Coupons
- -- ---------------------------------------------------
+ 
+ -- 9.Coupons
+ 
 CREATE TABLE coupons (
     coupon_id       INT PRIMARY KEY AUTO_INCREMENT,
     coupon_code     VARCHAR(30) NOT NULL UNIQUE,
@@ -133,9 +130,8 @@ CREATE TABLE coupons (
     created_at      DATETIME DEFAULT CURRENT_TIMESTAMP
 ); 
  
- -- ============================================================
--- SECTION 2: SAMPLE DATA
--- ============================================================
+ 
+--  SAMPLE DATA
  
  INSERT INTO categories (category_name) VALUES
 ('Electronics'), ('Clothing'), ('Books'), ('Home & Kitchen'), ('Sports');
@@ -237,13 +233,12 @@ INSERT INTO coupons (coupon_code, discount_pct, valid_from, valid_until, max_use
 ('NEWUSER15',15.00, '2024-01-01', '2024-12-31', 2000, 312);
 
 
--- ============================================================
--- SECTION 3: ANALYTICAL QUERIES
--- ============================================================
 
--- ------------------------------------------------------------
--- Q1. Top 5 customers by total revenue generated
--- ------------------------------------------------------------
+--  QUERIES
+
+
+--  Top 5 customers by total revenue generated
+
 
 SELECT
     c.customer_id,
@@ -259,9 +254,8 @@ GROUP BY c.customer_id, customer_name, c.city
 ORDER BY total_spent DESC
 LIMIT 5;
   
--- ------------------------------------------------------------
--- Q2. Monthly revenue trend (Jan–Jun 2024)
--- ------------------------------------------------------------  
+
+--  Monthly revenue trend (Jan–Jun 2024) 
   SELECT
          DATE_FORMAT(o.order_date,  '%Y-%m')     AS month,
          COUNT(DISTINCT o.order_id)            AS total_orders,
@@ -272,10 +266,10 @@ LIMIT 5;
          GROUP BY month
          ORDER BY month;
   
- -- ------------------------------------------------------------
--- Q3. Best-selling products by quantity sold
--- ------------------------------------------------------------
  
+--  Best-selling products by quantity sold
+
+
 SELECT 
 		p.product_id,
         p.product_name,
@@ -291,9 +285,8 @@ SELECT
         ORDER BY total_qty_sold DESC;
 	
         
--- ------------------------------------------------------------
--- Q4. Revenue contribution by product category
--- ------------------------------------------------------------
+--  Revenue contribution by product category
+
 
 SELECT
 		cat.category_name,
@@ -311,9 +304,9 @@ SELECT
     ORDER BY category_revenue DESC;
     
         
-  -- ------------------------------------------------------------
--- Q5. Most popular payment modes
--- ------------------------------------------------------------
+  
+-- Most popular payment modes
+
   
 SELECT 
 		payment_mode,
@@ -326,9 +319,7 @@ SELECT
         ORDER BY total_transactions DESC;
         
 
--- ------------------------------------------------------------
--- Q6. Products low on stock (stock < 100)
--- ------------------------------------------------------------
+--  Products low on stock (stock < 100)
 SELECT
 		p.product_id,
         p.product_name,
@@ -340,9 +331,9 @@ SELECT
         WHERE stock < 100
         ORDER BY p.stock ASC;
         
- -- ------------------------------------------------------------
--- Q7. Average product rating with total reviews
--- ------------------------------------------------------------
+ 
+--  Average product rating with total reviews
+
  
  SELECT 
        p.product_id,
@@ -355,10 +346,10 @@ SELECT
         ORDER BY avg_rating DESC, total_reviews DESC;
  
  
-				-- --------------------------------------------------------------------
+				
 				--   Project by : Rohit Godshelwar
 				-- Project Name : Database Design and Analysis of an e-commerce store
-				-- ---------------------------------------------------------------------
+				
  
         
  
